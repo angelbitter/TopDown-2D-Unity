@@ -7212,6 +7212,7 @@ GameObject:
   - component: {fileID: 166038456}
   - component: {fileID: 166038454}
   - component: {fileID: 166038457}
+  - component: {fileID: 166038458}
   m_Layer: 0
   m_Name: Sage
   m_TagString: Untagged
@@ -7356,6 +7357,28 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!95 &166038458
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 166038453}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2372a77d50c59a847863d9b0759c56db, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &191463636 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 759094866675675378, guid: fe291d65d4bfc9f4b98af7e4320edd59, type: 3}
