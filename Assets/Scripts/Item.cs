@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class Item : MonoBehaviour, IInteractable
 {
-    [SerializeField] private ItemSO itemData;
+    [SerializeField] public ItemSO itemData;
     [SerializeField] private GameManagerSO gameManager;
     public void Interact()
     {
-        gameManager.Inventory.AddItem(itemData);
+        InventoryController.Instance.AddItem(new ItemData(itemData));
         Destroy(gameObject);
     }
 }

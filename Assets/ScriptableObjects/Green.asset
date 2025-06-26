@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edc0e2dbd79dce049b747ba3555f2ffc, type: 3}
   m_Name: Green
   m_EditorClassIdentifier: 
+  id: 4
   damage: 0
   itemName: Green
   levelNeeded: 1
   icon: {fileID: 21300000, guid: 0a383cab99e134bdbbeff62cbb6af271, type: 3}
+  type: 

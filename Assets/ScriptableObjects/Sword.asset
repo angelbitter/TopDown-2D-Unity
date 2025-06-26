@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edc0e2dbd79dce049b747ba3555f2ffc, type: 3}
   m_Name: Sword
   m_EditorClassIdentifier: 
+  id: 6
   damage: 10
   itemName: Sword
   levelNeeded: 10
   icon: {fileID: 21300000, guid: ad4bde4ff881b433c9782cb194049b0f, type: 3}
+  type: 
