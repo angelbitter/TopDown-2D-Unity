@@ -178,6 +178,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 5
   interactionRadius: 0.45
+  pauseCanvas: {fileID: 0}
 --- !u!95 &378611104277031140
 Animator:
   serializedVersion: 7
