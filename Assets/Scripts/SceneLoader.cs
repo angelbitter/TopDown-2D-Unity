@@ -25,7 +25,7 @@ public class SceneLoader : MonoBehaviour
             Time.timeScale = 1f; // Se reanuda el juego
             //music.UnPause();// Se reanuda la música
         }
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene(0);
     }
     public void ResumeGame()
     {
