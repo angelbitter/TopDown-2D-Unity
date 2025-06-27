@@ -19,10 +19,17 @@ public class Player : MonoBehaviour
     private bool interacting = false;
     public bool Interacting { get => interacting; set => interacting = value; }
 
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+    }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        animator = GetComponent<Animator>();
+        transform.position = GameManager.Instance.LastSavedPosition;
+        animator.SetFloat("inputH", GameManager.Instance.LastSavedRotation.x);
+        animator.SetFloat("inputV", GameManager.Instance.LastSavedRotation.y);
         destinationPoint = transform.position;
         interactPoint = transform.position + Vector3.down;
         interacting = false;
@@ -86,6 +93,13 @@ public class Player : MonoBehaviour
             if (!colliderInFront)
             {
                 StartCoroutine(MoveToDestination());
+            } 
+            else if(colliderInFront.gameObject.CompareTag("Door"))
+            {
+                if (colliderInFront.gameObject.TryGetComponent(out IInteractable interactable))
+                {
+                    interactable.Interact();
+                }
             }
         }
         else if (inputH == 0 && inputV == 0)
