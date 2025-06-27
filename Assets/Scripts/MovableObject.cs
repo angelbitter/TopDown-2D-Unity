@@ -8,6 +8,8 @@ public class MovableObject : MonoBehaviour, IInteractable
     private float moveDistance = 1f;
     private Rigidbody2D rb;
     private Vector3 targetPosition;
+    private Vector3 newPosition;
+    private float radioNewPosition = 0.45f;
     private bool isMoving = false;
 
     private void Awake()
@@ -47,7 +49,13 @@ public class MovableObject : MonoBehaviour, IInteractable
         Vector3 moveDir = GetCardinalDirection(rawDirection);
 
         // Calcular destino
-        targetPosition = currentPos + moveDir * moveDistance;
+        newPosition = currentPos + moveDir * moveDistance;
+        Collider2D colliderNewPosition = Physics2D.OverlapCircle(newPosition, radioNewPosition);
+        //Solo movemos el objeto si no hay colliders en destino o si el destino es un interruptor
+        if (colliderNewPosition == null || colliderNewPosition.gameObject.CompareTag("Switch"))
+        {
+            targetPosition = newPosition;
+        }
         isMoving = true;
     }
 
@@ -61,5 +69,11 @@ public class MovableObject : MonoBehaviour, IInteractable
         {
             return new Vector3(0, Mathf.Sign(dir.y), 0); // Arriba o abajo
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(newPosition, radioNewPosition);
     }
 }

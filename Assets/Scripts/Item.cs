@@ -3,25 +3,31 @@ using UnityEngine;
 public class Item : NonPersistenObject, IInteractable
 {
     [SerializeField] public ItemSO itemData;
+    [SerializeField] private Canvas endCanvas;
 
     private void Start()
     {
-        if (GameManager.Instance.nonPersistentObjects.ContainsKey(uniqueId))
+        if (GameManager.Instance.NonPersistentObjects.ContainsKey(uniqueId))
         {
-            if (GameManager.Instance.nonPersistentObjects[uniqueId] == false)
+            if (GameManager.Instance.NonPersistentObjects[uniqueId] == false)
             {
                 Destroy(gameObject);
             }
         }
         else
         {
-            GameManager.Instance.nonPersistentObjects.Add(uniqueId, true);
+            GameManager.Instance.NonPersistentObjects.Add(uniqueId, true);
         }
     }
     public void Interact()
     {
         InventoryController.Instance.AddItem(new ItemData(itemData));
         Destroy(gameObject);
-        GameManager.Instance.nonPersistentObjects[uniqueId] = false;
+        GameManager.Instance.NonPersistentObjects[uniqueId] = false;
+
+        if(itemData.name.Equals("Trophy"))
+        {
+            GameManager.Instance.EndGame(endCanvas);
+        }
     }
 }
