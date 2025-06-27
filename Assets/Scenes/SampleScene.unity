@@ -482,11 +482,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8129224619319072287, guid: fd7cc8ac371fb4d4380bde4daee83552, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.450047
+      value: -4.5
       objectReference: {fileID: 0}
     - target: {fileID: 8129224619319072287, guid: fd7cc8ac371fb4d4380bde4daee83552, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.4400396
+      value: 5.5
       objectReference: {fileID: 0}
     - target: {fileID: 8129224619319072287, guid: fd7cc8ac371fb4d4380bde4daee83552, type: 3}
       propertyPath: m_LocalPosition.z
@@ -520,6 +520,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8991021055527501447, guid: fd7cc8ac371fb4d4380bde4daee83552, type: 3}
+      propertyPath: dialogueBox
+      value: 
+      objectReference: {fileID: 2128846594}
+    - target: {fileID: 8991021055527501447, guid: fd7cc8ac371fb4d4380bde4daee83552, type: 3}
+      propertyPath: dialogueText
+      value: 
+      objectReference: {fileID: 691762301}
     - target: {fileID: 8991021055527501447, guid: fd7cc8ac371fb4d4380bde4daee83552, type: 3}
       propertyPath: dialogues.Array.size
       value: 3
@@ -29362,8 +29370,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: f042bd451f48441e19db367bc0063f53, type: 3}
+  m_Resource: {fileID: 8300000, guid: f042bd451f48441e19db367bc0063f53, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
