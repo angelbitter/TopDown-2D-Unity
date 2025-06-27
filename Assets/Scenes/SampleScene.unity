@@ -29059,6 +29059,144 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6240161719376401934, guid: fe291d65d4bfc9f4b98af7e4320edd59, type: 3}
   m_PrefabInstance: {fileID: 5957883561120096254}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1656964759
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1806654355510459352, guid: adcd6f558ac8f2644bb5140ae4d59468, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1806654355510459352, guid: adcd6f558ac8f2644bb5140ae4d59468, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1806654355510459352, guid: adcd6f558ac8f2644bb5140ae4d59468, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1806654355510459352, guid: adcd6f558ac8f2644bb5140ae4d59468, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1806654355510459352, guid: adcd6f558ac8f2644bb5140ae4d59468, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1806654355510459352, guid: adcd6f558ac8f2644bb5140ae4d59468, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1806654355510459352, guid: adcd6f558ac8f2644bb5140ae4d59468, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1806654355510459352, guid: adcd6f558ac8f2644bb5140ae4d59468, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1806654355510459352, guid: adcd6f558ac8f2644bb5140ae4d59468, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1806654355510459352, guid: adcd6f558ac8f2644bb5140ae4d59468, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450563743046744696, guid: adcd6f558ac8f2644bb5140ae4d59468, type: 3}
+      propertyPath: targetSceneIndex
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450563743046744696, guid: adcd6f558ac8f2644bb5140ae4d59468, type: 3}
+      propertyPath: newPlayerPosition.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450563743046744696, guid: adcd6f558ac8f2644bb5140ae4d59468, type: 3}
+      propertyPath: newPlayerPosition.y
+      value: -3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3797693388656484676, guid: adcd6f558ac8f2644bb5140ae4d59468, type: 3}
+      propertyPath: m_Name
+      value: DoorCasa
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: adcd6f558ac8f2644bb5140ae4d59468, type: 3}
+--- !u!1001 &1766565988
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2501366579264304643, guid: 11c749ce10fc5814cbc9504627d7c194, type: 3}
+      propertyPath: dialogueBox
+      value: 
+      objectReference: {fileID: 1518489624}
+    - target: {fileID: 2501366579264304643, guid: 11c749ce10fc5814cbc9504627d7c194, type: 3}
+      propertyPath: dialogueText
+      value: 
+      objectReference: {fileID: 1126410617}
+    - target: {fileID: 2501366579264304643, guid: 11c749ce10fc5814cbc9504627d7c194, type: 3}
+      propertyPath: 'dialogues.Array.data[0]'
+      value: Cueva de los Misterios
+      objectReference: {fileID: 0}
+    - target: {fileID: 6567305905923892588, guid: 11c749ce10fc5814cbc9504627d7c194, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 13.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6567305905923892588, guid: 11c749ce10fc5814cbc9504627d7c194, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6567305905923892588, guid: 11c749ce10fc5814cbc9504627d7c194, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6567305905923892588, guid: 11c749ce10fc5814cbc9504627d7c194, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6567305905923892588, guid: 11c749ce10fc5814cbc9504627d7c194, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6567305905923892588, guid: 11c749ce10fc5814cbc9504627d7c194, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6567305905923892588, guid: 11c749ce10fc5814cbc9504627d7c194, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6567305905923892588, guid: 11c749ce10fc5814cbc9504627d7c194, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6567305905923892588, guid: 11c749ce10fc5814cbc9504627d7c194, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6567305905923892588, guid: 11c749ce10fc5814cbc9504627d7c194, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8817943270097809993, guid: 11c749ce10fc5814cbc9504627d7c194, type: 3}
+      propertyPath: m_Name
+      value: Sign
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 11c749ce10fc5814cbc9504627d7c194, type: 3}
 --- !u!4 &1847605847 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8005124315700518943, guid: 27988abfb9b73494ab91610fb6d786ea, type: 3}
@@ -29253,6 +29391,23 @@ PrefabInstance:
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 1126410617}
+    - target: {fileID: 8991021055527501447, guid: fd7cc8ac371fb4d4380bde4daee83552, type: 3}
+      propertyPath: dialogues.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8991021055527501447, guid: fd7cc8ac371fb4d4380bde4daee83552, type: 3}
+      propertyPath: 'dialogues.Array.data[0]'
+      value: "\xA1Bienvenido a la isla del Trofeo!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8991021055527501447, guid: fd7cc8ac371fb4d4380bde4daee83552, type: 3}
+      propertyPath: 'dialogues.Array.data[1]'
+      value: "Para ganar este reto, primero tendr\xE1s que entrar en la cueva de
+        los Misterios"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8991021055527501447, guid: fd7cc8ac371fb4d4380bde4daee83552, type: 3}
+      propertyPath: 'dialogues.Array.data[2]'
+      value: "\xA1Mucha suerte!"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -29308,7 +29463,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3797693388656484676, guid: adcd6f558ac8f2644bb5140ae4d59468, type: 3}
       propertyPath: m_Name
-      value: Door
+      value: DoorCueva
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -29329,7 +29484,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7373951797787318207, guid: 0176854d2133d6a4facd31a948e8e032, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.5
+      value: -7.5
       objectReference: {fileID: 0}
     - target: {fileID: 7373951797787318207, guid: 0176854d2133d6a4facd31a948e8e032, type: 3}
       propertyPath: m_LocalPosition.y
@@ -29380,6 +29535,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5950050487871716967, guid: 8f84717f7d8d3884f8e7403a3814c95c, type: 3}
+      propertyPath: pauseCanvas
+      value: 
+      objectReference: {fileID: 54599047}
     - target: {fileID: 6771661015826481501, guid: 8f84717f7d8d3884f8e7403a3814c95c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.2865555
@@ -29891,3 +30050,5 @@ SceneRoots:
   - {fileID: 54599046}
   - {fileID: 1572355219942798016}
   - {fileID: 104016830226281959}
+  - {fileID: 1656964759}
+  - {fileID: 1766565988}

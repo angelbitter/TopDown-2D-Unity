@@ -7,7 +7,6 @@ public class Player : MonoBehaviour
     [Header("Movement Settings")]
     [SerializeField] private float movementSpeed;
     [SerializeField] private float interactionRadius;
-    [SerializeField] private Canvas pauseCanvas;
     private float inputH;
     private float inputV;
     private Vector3 destinationPoint;
@@ -40,16 +39,7 @@ public class Player : MonoBehaviour
     {
         InputReading();
         Move();
-        PauseGame();
-    }
-
-    private void PauseGame()
-    {
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            pauseCanvas.gameObject.SetActive(true);
-            Time.timeScale = 0f; // Se pausa el juego
-        }
+        GameManager.Instance.PauseGame();
     }
 
     private void InputReading()
