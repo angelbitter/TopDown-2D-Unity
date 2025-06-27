@@ -1,4 +1,3 @@
-using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -6,8 +5,8 @@ using UnityEngine.SceneManagement;
 public class GameManagerSO : ScriptableObject
 {
     private Player player;
-    private InventorySystem inventory;
-    public InventorySystem Inventory {get => inventory;}
+    private InventoryController inventory;
+    public InventoryController Inventory {get => inventory;}
     private void OnEnable()
     {
         SceneManager.sceneLoaded += NewSceneLoaded;
@@ -15,7 +14,6 @@ public class GameManagerSO : ScriptableObject
     private void NewSceneLoaded(Scene arg0, LoadSceneMode arg1)
     {
         player = FindFirstObjectByType<Player>();
-        inventory = FindFirstObjectByType<InventorySystem>();
     }
     public void ChangePlayerState(bool state)
     {

@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edc0e2dbd79dce049b747ba3555f2ffc, type: 3}
   m_Name: Bomb
   m_EditorClassIdentifier: 
+  id: 7
   damage: 20
   itemName: Bomb
   levelNeeded: 10
   icon: {fileID: 21300000, guid: 90a177c6fcc6045b3817e7b3d2b189f0, type: 3}
+  type: 

@@ -1,14 +1,29 @@
 using UnityEngine;
 
-public class Item : MonoBehaviour, IInteractable
+public class Item : NonPersistenObject, IInteractable
 {
-    [SerializeField] private ItemSO itemData;
-    [SerializeField] private GameManagerSO gameManager;
+    [SerializeField] public ItemSO itemData;
     [SerializeField] private Canvas endCanvas;
+
+    private void Start()
+    {
+        if (GameManager.Instance.NonPersistentObjects.ContainsKey(uniqueId))
+        {
+            if (GameManager.Instance.NonPersistentObjects[uniqueId] == false)
+            {
+                Destroy(gameObject);
+            }
+        }
+        else
+        {
+            GameManager.Instance.NonPersistentObjects.Add(uniqueId, true);
+        }
+    }
     public void Interact()
     {
-        gameManager.Inventory.AddItem(itemData);
+        InventoryController.Instance.AddItem(new ItemData(itemData));
         Destroy(gameObject);
+        GameManager.Instance.NonPersistentObjects[uniqueId] = false;
 
         if(itemData.name.Equals("Trophy"))
         {
