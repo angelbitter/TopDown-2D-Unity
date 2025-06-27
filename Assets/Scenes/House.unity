@@ -7548,6 +7548,10 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7468345409814365480, guid: 294a54894cd5bff45a2ef64ec4f4f65f, type: 3}
+      propertyPath: endCanvas
+      value: 
+      objectReference: {fileID: 6913776199097414229}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
