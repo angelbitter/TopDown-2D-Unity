@@ -62,9 +62,15 @@ public class Player : MonoBehaviour
         colliderInFront = CheckInteractPoint();
         if (colliderInFront)
         {
+            Debug.Log("Collider in front: " + colliderInFront.name);
             if (colliderInFront.TryGetComponent(out IInteractable interactable))
             {
+                Debug.Log("Interacting with: " + interactable);
                 interactable.Interact();
+                if (interactable is ItemData itemData)
+                {
+                    Debug.Log("Picked up item: " + itemData.itemName);
+                }
             }
         }
     }
