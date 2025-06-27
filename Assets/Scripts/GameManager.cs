@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,14 +11,16 @@ public class GameManager : MonoBehaviour
 
     public Vector3 LastSavedPosition { get; private set; } = new Vector3(0.5f, 0.5f, 0);
     public Vector2 LastSavedRotation { get; private set; } = new Vector2(0, -1);
+    public bool HasLeftCave { get; set; } = false;
 
     private void Awake()
     {
-        if(Instance == null)
+        if (Instance == null)
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
-        } else
+        }
+        else
         {
             Destroy(gameObject);
         }
@@ -26,6 +29,7 @@ public class GameManager : MonoBehaviour
     {
         LastSavedPosition = newPlayerPosition;
         LastSavedRotation = newPlayerRotation;
+        Debug.Log($"Cargando escena {GameManager.Instance.HasLeftCave   } con posición {newPlayerPosition} y rotación {newPlayerRotation}");
         SceneManager.LoadScene(targetSceneIndex);
     }
 

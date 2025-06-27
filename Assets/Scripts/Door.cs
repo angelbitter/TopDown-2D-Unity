@@ -48,7 +48,7 @@ public class Door : MonoBehaviour, IInteractable
                 if (keyIDs.Contains(1) && keyIDs.Contains(2) && keyIDs.Contains(3) && keyIDs.Contains(4))
                 {
                     puertaBloqueada = false;
-
+                    GameManager.Instance.HasLeftCave = true;
                     audioSource.PlayOneShot(doorEnterSound);
                     return;
                 }
