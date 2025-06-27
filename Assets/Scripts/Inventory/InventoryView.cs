@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class InventoryView : MonoBehaviour
@@ -32,17 +33,19 @@ public class InventoryView : MonoBehaviour
     }
     public void UpdateInventory()
     {
-        // for (int i = 0; i < slots.Length; i++)
-        // {
-        //     if (i < InventoryController.Instance.items.Count)
-        //     {
-        //         slots[i].gameObject.SetActive(true);
-        //         slots[i].SetItem(InventoryController.Instance.GetItem(i));
-        //     }
-        //     else
-        //     {
-        //         slots[i].gameObject.SetActive(false);
-        //     }
-        // }
+        List<ItemData> currentList = InventoryController.Instance.Items;
+        if (currentList == null)
+        {
+            return;
+        }
+        for (int i = 0; i < currentList.Count; i++)
+        {
+            if (slots[i].CurrentView == null)
+            {
+                return;
+            }
+            slots[i].CurrentView.SetItem(currentList[i]);
+            slots[i].gameObject.SetActive(true);
+        }
     }
 }
