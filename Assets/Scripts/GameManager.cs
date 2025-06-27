@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
-    public Dictionary<string, bool> nonPersistentObjects { get; private set; } = new Dictionary<string, bool>();
+    public Dictionary<string, bool> NonPersistentObjects { get; private set; } = new Dictionary<string, bool>();
 
     public Vector3 LastSavedPosition { get; private set; } = new Vector3(0.5f, 0.5f, 0);
     public Vector2 LastSavedRotation { get; private set; } = new Vector2(0, -1);

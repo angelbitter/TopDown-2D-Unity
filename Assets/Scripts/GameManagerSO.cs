@@ -14,7 +14,6 @@ public class GameManagerSO : ScriptableObject
     private void NewSceneLoaded(Scene arg0, LoadSceneMode arg1)
     {
         player = FindFirstObjectByType<Player>();
-        inventory = FindFirstObjectByType<InventoryController>();
     }
     public void ChangePlayerState(bool state)
     {

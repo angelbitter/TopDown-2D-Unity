@@ -34,21 +34,19 @@ public class Door : MonoBehaviour, IInteractable
         if (puertaBloqueada)
         {
             Debug.Log("Puerta bloqueada, necesitas las llaves");
-            if (InventoryController.Instance.Items.Count > 1)
+            if (InventoryController.Instance.Items.Count > 3)
             {
                 List<int> keyIDs = new();
                 foreach (ItemData item in InventoryController.Instance.Items)
                 {
-                    // if (item.id == 1 || item.id == 2 || item.id == 3 || item.id == 4)
+                    if (item.id == 1 || item.id == 2 || item.id == 3 || item.id == 4)
                     if (item.id == 1 || item.id == 2)
                     {
                         keyIDs.Add(item.id);
                     }
                 }
-                // if (keyIDs.Contains(1) && keyIDs.Contains(2) && keyIDs.Contains(3) && keyIDs.Contains(4))
-                if (keyIDs.Contains(1) && keyIDs.Contains(2))
+                if (keyIDs.Contains(1) && keyIDs.Contains(2) && keyIDs.Contains(3) && keyIDs.Contains(4))
                 {
-                    Debug.Log("Puerta desbloqueada, puedes entrar");
                     puertaBloqueada = false;
 
                     audioSource.PlayOneShot(doorEnterSound);
