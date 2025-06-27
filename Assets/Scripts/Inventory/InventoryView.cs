@@ -6,6 +6,7 @@ public class InventoryView : MonoBehaviour
     [SerializeField] private GameObject inventoryFrame;
     
     [SerializeField] private ItemSlot[] slots;
+    [SerializeField] private ItemView itemViewPrefab;
     public static InventoryView Instance { get; private set; }
 
     private void Awake()
@@ -40,9 +41,10 @@ public class InventoryView : MonoBehaviour
         }
         for (int i = 0; i < currentList.Count; i++)
         {
-            if (slots[i].CurrentView == null)
+            if (!slots[i].CurrentView)
             {
-                return;
+                ItemView itemViewCreated = Instantiate(itemViewPrefab, slots[i].transform);
+                slots[i].CurrentView = itemViewCreated;
             }
             slots[i].CurrentView.SetItem(currentList[i]);
             slots[i].gameObject.SetActive(true);

@@ -10,12 +10,12 @@ public class ItemView : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     [SerializeField] private TMP_Text itemName;
     [SerializeField] private TMP_Text itemAmount;
 
-    private ItemData currentData;
+    public ItemData CurrentData { get; set; }
     private Canvas canvas;
     private CanvasGroup canvasGroup;
     private RectTransform rectTransform;
     private Vector3 originalPosition;
-    private Transform originalParent;
+    public ItemSlot OriginalParent { get; set; }
 
     private void Awake()
     {
@@ -23,11 +23,11 @@ public class ItemView : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         rectTransform = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
         originalPosition = rectTransform.anchoredPosition;
-        originalParent = rectTransform.parent;
+        OriginalParent = transform.parent.GetComponent<ItemSlot>();
     }
     public void SetItem(ItemData itemData)
     {
-        currentData = itemData;
+        CurrentData = itemData;
         icon.sprite = itemData.itemSprite;
         itemName.text = itemData.itemName;
         itemAmount.text = "x " + itemData.amount.ToString();
@@ -49,7 +49,7 @@ public class ItemView : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         canvasGroup.alpha = 1f;
         if (rectTransform.parent == canvas.transform)
         {
-            transform.SetParent(originalParent);
+            transform.SetParent(OriginalParent.transform);
             rectTransform.anchoredPosition = originalPosition;
         }
     }
